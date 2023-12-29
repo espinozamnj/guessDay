@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Guess-day-style.css">
+    <title>Guess Day!</title>
+</head>
+<body>
+    <div class="root">
+        <div class="app">
+            <div class="screens">
+                <div class="screen home">
+                    <div class="game-title">Adivina el día</div>
+                    <div class="settings">
+                        <div class="item-sett">
+                            <span>Intentos:</span>
+                            <input type="number" id="ipt-attemps" value="5" min="1" max="50" step="1">
+                        </div>
+                        <div class="item-sett">
+                            <span>Desde:</span>
+                            <input type="date" id="ipt-date-start">
+                        </div>
+                        <div class="item-sett">
+                            <span>Hasta:</span>
+                            <input type="date" id="ipt-date-end">
+                        </div>
+                    </div>
+                    <div class="start">
+                        <button id="start">
+                            <div class="in-btn">Empezar</div>
+                        </button>
+                    </div>
+                </div>
+                <div class="screen game">
+                    <div class="game-face">
+                        <div class="game-header">
+                            <div class="txt-anio"></div>
+                            <div class="txt-attemps"></div>
+                        </div>
+                        <div class="game-form"></div>
+                        <div class="game-foo">
+                            <button id="game-exit">
+                                <svg height="16" width="16" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></svg>
+                                <span>Salir</span>
+                            </button>
+                            <span id="game-clock">--:--</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="screen result hide-right">
+                    <div class="game-result-cont">
+                        <div class="game-result-image"></div>
+                        <div class="game-result-info"></div>
+                    </div>
+                    <div class="p-results">
+                        <div class="p-result-text" data-result="average"><span>Promedio:</span><b></b></div>
+                        <div class="p-result-text" data-result="total"><span>Tiempo total:</span><b></b></div>
+                        <div class="p-result-text" data-result="att-ok"><span>Aciertos:</span><b></b></div>
+                        <div class="p-result-text" data-result="att-fa"><span>Fallos:</span><b></b></div>
+                    </div>
+                    <button id="game-restart">
+                        <svg height="16" width="16" viewBox="0 0 512 512"><path d="M386.3 160H336c-17.7 0-32 14.3-32 32s14.3 32 32 32H464c17.7 0 32-14.3 32-32V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v51.2L414.4 97.6c-87.5-87.5-229.3-87.5-316.8 0s-87.5 229.3 0 316.8s229.3 87.5 316.8 0c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0c-62.5 62.5-163.8 62.5-226.3 0s-62.5-163.8 0-226.3s163.8-62.5 226.3 0L386.3 160z"/></svg>
+                        <span>Reintentar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="js">
+            <script src="Guess-day-app.js"></script>
+        </div>
+    </div>
+</body>
+</html>
